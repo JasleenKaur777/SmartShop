@@ -1,1 +1,122 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Tagesschrift&display=swap');
+*{
+   font-family: "Nunito", sans-serif;
+}
+.auth-container {
+  min-height: 90vh;
+   background-image: url('assets/shopping.jpeg');
+   background-size: cover;
+  background-repeat: repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-in;
+  position: relative;
+}
+
+.auth-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay for text readability */
+  z-index: 0;
+}
+
+.auth-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  max-width: 420px;
+  width: 100%;
+  color: #fff;
+  animation: slideInUp 1s ease;
+}
+
+/* Card heading */
+.auth-card h3 {
+   font-family: "Nunito", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+/* Custom form input */
+.input-group {
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  top: 13px;
+  left: 14px;
+  color: #ffffffb0;
+}
+
+.form-control {
+  padding-left: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.form-control::placeholder {
+  color: #f0f0f0;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.3);
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+  color: #000;
+}
+
+/* Button styling */
+.btn-custom {
+  background: #cb0734;
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 700px;
+  margin-top: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-custom:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(255, 65, 108, 0.5);
+}
+
+/* Link text */
+.auth-card p a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes slideInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
