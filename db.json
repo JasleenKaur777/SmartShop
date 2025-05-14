@@ -5,6 +5,18 @@
       "name": "John Doe",
       "email": "john@example.com",
       "password": "123456"
+    },
+    {
+      "id": "322f",
+      "name": "Rajan Doe",
+      "email": "rajan@example.com",
+      "password": "123456"
+    },
+    {
+      "id": "4171",
+      "fullname": "harsh",
+      "email": "harsh23@gmail.com",
+      "password": "123456"
     }
   ]
 }
